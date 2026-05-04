@@ -18,6 +18,7 @@ public class BaseTest {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--remote-debugging-port=0");
         options.addArguments("--no-first-run");
+        
         options.addArguments("--disable-extensions");
 
         // ✅ Selenium 4 has built-in Selenium Manager — no WebDriverManager needed
