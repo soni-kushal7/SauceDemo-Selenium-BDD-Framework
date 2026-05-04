@@ -12,12 +12,16 @@ public class BaseTest {
 	public void setUp() {
 		
 		EdgeOptions options = new EdgeOptions();
-		// Headless arguments for Jenkins/CI environments
-		options.addArguments("--headless"); 
+
+		options.addArguments("--headless=new");          // ✅ new headless syntax for modern Edge
 		options.addArguments("--disable-gpu");
 		options.addArguments("--window-size=1920,1080");
 		options.addArguments("--no-sandbox");
 		options.addArguments("--disable-dev-shm-usage");
+		options.addArguments("--remote-debugging-port=0"); // ✅ lets OS pick a free port
+		options.addArguments("--disable-extensions");      // ✅ avoids extension-related crashes
+		options.addArguments("--no-first-run");            // ✅ skips first-run setup under SYSTEM
+		options.addArguments("--disable-background-networking");
 
 		// Initialize the driver ONCE using the options
 		driver = new EdgeDriver(options);
