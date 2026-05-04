@@ -22,7 +22,7 @@ public class BaseTest {
 		// Initialize the driver ONCE using the options
 		driver = new EdgeDriver(options);
 		
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	
