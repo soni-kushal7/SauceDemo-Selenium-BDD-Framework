@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseTest {
 
 	public static WebDriver driver;
@@ -23,8 +25,9 @@ public class BaseTest {
 		options.addArguments("--no-first-run");            // ✅ skips first-run setup under SYSTEM
 		options.addArguments("--disable-background-networking");
 
-		// Initialize the driver ONCE using the options
-		driver = new EdgeDriver(options);
+		  WebDriverManager.edgedriver().setup();     // ← sets up the correct msedgedriver
+	        driver = new EdgeDriver(options);          // ← launches Edge with the options above  WebDriverManager.edgedriver().setup();     // ← sets up the correct msedgedriver
+	        driver = new EdgeDriver(options);          // ← launches Edge with the options above
 		
 		//driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
