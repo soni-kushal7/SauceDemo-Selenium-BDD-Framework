@@ -3,9 +3,9 @@ package base;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
@@ -25,11 +25,9 @@ public class BaseTest {
 //        options.addArguments("--disable-extensions");
 //
         // ✅ Selenium 4 has built-in Selenium Manager — no WebDriverManager needed
-        System.setProperty(
-        	    "webdriver.edge.driver",
-        	    System.getProperty("user.dir") + "\\resources\\msedgedriver.exe"
-        	);        
-        driver = new EdgeDriver();
+    	WebDriverManager.edgedriver().setup();
+
+    	driver = new EdgeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         
