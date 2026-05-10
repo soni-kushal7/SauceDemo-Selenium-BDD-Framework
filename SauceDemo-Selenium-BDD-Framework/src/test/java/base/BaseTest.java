@@ -25,8 +25,8 @@ public class BaseTest {
 //        options.addArguments("--disable-extensions");
 //
         // ✅ Selenium 4 has built-in Selenium Manager — no WebDriverManager needed
-    	WebDriverManager.edgedriver().setup();
 
+    	System.setProperty("webdriver.edge.driver", "./resources/msedgedriver.exe");
     	driver = new EdgeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
