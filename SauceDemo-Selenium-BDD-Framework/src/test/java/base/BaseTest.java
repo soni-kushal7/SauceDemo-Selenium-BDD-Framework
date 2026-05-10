@@ -3,6 +3,7 @@ package base;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -26,8 +27,8 @@ public class BaseTest {
 //
         // ✅ Selenium 4 has built-in Selenium Manager — no WebDriverManager needed
 
-    	System.setProperty("webdriver.edge.driver", "./resources/msedgedriver.exe");
-    	driver = new EdgeDriver();
+//    	System.setProperty("webdriver.edge.driver", "./resources/msedgedriver.exe");
+    	driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         
