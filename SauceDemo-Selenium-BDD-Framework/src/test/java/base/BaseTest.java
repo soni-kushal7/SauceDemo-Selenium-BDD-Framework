@@ -3,6 +3,7 @@ package base;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 
@@ -12,7 +13,7 @@ public class BaseTest {
 
     public void setUp() {
 
-        EdgeOptions options = new EdgeOptions();
+//        EdgeOptions options = new EdgeOptions();
 //       // options.addArguments("--headless=new");
 //        options.addArguments("--disable-gpu");
 //        options.addArguments("--window-size=1920,1080");
@@ -27,7 +28,8 @@ public class BaseTest {
         System.setProperty(
         	    "webdriver.edge.driver",
         	    System.getProperty("user.dir") + "\\resources\\msedgedriver.exe"
-        	);        driver = new EdgeDriver(options);
+        	);        
+        driver = new EdgeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         
