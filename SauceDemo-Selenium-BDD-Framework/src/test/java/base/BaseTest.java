@@ -13,18 +13,21 @@ public class BaseTest {
     public void setUp() {
 
         EdgeOptions options = new EdgeOptions();
-       // options.addArguments("--headless=new");
-        options.addArguments("--disable-gpu");
-        options.addArguments("--window-size=1920,1080");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--remote-debugging-port=0");
-        options.addArguments("--no-first-run");
-        
-        options.addArguments("--disable-extensions");
-
+//       // options.addArguments("--headless=new");
+//        options.addArguments("--disable-gpu");
+//        options.addArguments("--window-size=1920,1080");
+//        options.addArguments("--no-sandbox");
+//        options.addArguments("--disable-dev-shm-usage");
+//        options.addArguments("--remote-debugging-port=0");
+//        options.addArguments("--no-first-run");
+//        
+//        options.addArguments("--disable-extensions");
+//
         // ✅ Selenium 4 has built-in Selenium Manager — no WebDriverManager needed
-        driver = new EdgeDriver(options);
+        System.setProperty(
+        	    "webdriver.edge.driver",
+        	    System.getProperty("user.dir") + "\\resources\\msedgedriver.exe"
+        	);        driver = new EdgeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         
