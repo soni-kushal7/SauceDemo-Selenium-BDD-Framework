@@ -31,7 +31,9 @@ public class LogoutSteps extends BaseTest {
     
 
     @Then("the user should be redirected to the Login page")
-    public void the_user_should_be_redirected_to_the_login_page() {
+    public void the_user_should_be_redirected_to_the_login_page() throws InterruptedException {
+    	Thread.sleep(3000);
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/", "Logout failed.");
+        Thread.sleep(3000);
     }
 }
