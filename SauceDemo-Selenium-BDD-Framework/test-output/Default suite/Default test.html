@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 07 23:10:05 IST 2026</td>
+<td>Started on:</td><td>Mon May 11 12:09:18 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>15 seconds (15966 ms)</td>
+<tr><td>Total time:</td><td>22 seconds (22971 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,23 +76,27 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with a locked out user", "SauceDemo Login Functionality"</td>
-<td><div><pre>java.lang.AssertionError: Error message not found expected [false] but found [true]
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful logout", "SauceDemo Logout Functionality"</td>
+<td><div><pre>java.lang.AssertionError: Logout failed. expected [https://www.saucedemo.com/] but found [https://www.saucedemo.com/inventory.html]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertFalse(Assert.java:79)
-	at steps.LoginSteps.user_should_see_error_message(LoginSteps.java:43)
-	at ✽.user should see a &quot;locked out&quot; error message(file:///C:/Users/Book4%20Pro14/SauceDemoFramework/SauceDemo-Selenium-BDD-Framework/src/test/resources/features/loginSauce.feature:15)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1709043290", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1709043290'><pre>java.lang.AssertionError: Error message not found expected [false] but found [true]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at steps.LogoutSteps.the_user_should_be_redirected_to_the_login_page(LogoutSteps.java:36)
+	at ✽.the user should be redirected to the Login page(file:///C:/Users/Book4%20Pro14/SauceDemoFramework/SauceDemo-Selenium-BDD-Framework/src/test/resources/features/logoutSauce.feature:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1228589267", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1228589267'><pre>java.lang.AssertionError: Logout failed. expected [https://www.saucedemo.com/] but found [https://www.saucedemo.com/inventory.html]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertFalse(Assert.java:79)
-	at steps.LoginSteps.user_should_see_error_message(LoginSteps.java:43)
-	at ✽.user should see a &quot;locked out&quot; error message(file:///C:/Users/Book4%20Pro14/SauceDemoFramework/SauceDemo-Selenium-BDD-Framework/src/test/resources/features/loginSauce.feature:15)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at steps.LogoutSteps.the_user_should_be_redirected_to_the_login_page(LogoutSteps.java:36)
+	at ✽.the user should be redirected to the Login page(file:///C:/Users/Book4%20Pro14/SauceDemoFramework/SauceDemo-Selenium-BDD-Framework/src/test/resources/features/logoutSauce.feature:13)
 </pre></div></td>
-<td>3</td>
-<td>runner.TestRunner@77f80c04</td></tr>
+<td>7</td>
+<td>runner.TestRunner@6ff29830</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -103,15 +107,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful logout", "SauceDemo Logout Functionality"</td>
-<td></td>
-<td>3</td>
-<td>runner.TestRunner@77f80c04</td></tr>
-<tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with a different valid user", "SauceDemo Login Functionality"</td>
 <td></td>
-<td>5</td>
-<td>runner.TestRunner@77f80c04</td></tr>
+<td>10</td>
+<td>runner.TestRunner@6ff29830</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with a locked out user", "SauceDemo Login Functionality"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestRunner@6ff29830</td></tr>
 </table><p>
 </body>
 </html>
